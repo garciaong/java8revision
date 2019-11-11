@@ -9,6 +9,15 @@ import java.util.concurrent.Future;
 public class TestThread {
 
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
+		/**
+		 * Result 
+		 * Final result : 0 
+		 * Current result : 1 
+		 * Final result : 1 
+		 * Thread output :
+		 * Display as result 
+		 * 5 Threads output : Display as result
+		 */
 		CustomTask c = new CustomTask();
 		Thread t = new Thread(c);
 		t.start();
@@ -30,7 +39,7 @@ public class TestThread {
 				return input;
 			}
 		});
-		System.out.println(String.format("5 Threads output : %s", future2.get())); 
+		System.out.println(String.format("5 Threads output : %s", future2.get()));
 
 	}
 
